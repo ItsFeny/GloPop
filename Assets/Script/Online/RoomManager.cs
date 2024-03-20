@@ -9,7 +9,8 @@ public class RoomManager : MonoBehaviourPunCallbacks
     public Transform SpawnPoint1;
     public Transform SpawnPoint2;
     public GameObject cuerdaObject;
-    public TextMeshProUGUI countdownText; 
+    public TextMeshProUGUI countdownText;
+    public Canvas infoCanvas; // Agrega referencia al Canvas que deseas activar al final del contador
     public Vector3 playerRotation = new Vector3(0f, 263.509f, 0f);
 
     private void Start()
@@ -60,5 +61,14 @@ public class RoomManager : MonoBehaviourPunCallbacks
         yield return new WaitForSeconds(1f); // Espera un segundo después de mostrar "YA!!"
         countdownText.gameObject.SetActive(false); // Desactiva el texto
         cuerdaObject.SetActive(true); // Activa la cuerda
+
+        // Activa el Canvas después de activar la cuerda
+        photonView.RPC("ActivateInfoCanvas", RpcTarget.All);
+    }
+
+    [PunRPC]
+    void ActivateInfoCanvas()
+    {
+        infoCanvas.gameObject.SetActive(true);
     }
 }

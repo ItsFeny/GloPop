@@ -699,6 +699,7 @@ MonoBehaviour:
   SpawnPoint2: {fileID: 3981654869532394172}
   cuerdaObject: {fileID: 2752465994657507677}
   countdownText: {fileID: 8061316338832256899}
+  infoCanvas: {fileID: 2890148271383341622}
   playerRotation: {x: 0, y: 263.509, z: 0}
 --- !u!1 &2116645740
 GameObject:
