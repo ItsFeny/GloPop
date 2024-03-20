@@ -9,7 +9,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
     public Transform SpawnPoint1;
     public Transform SpawnPoint2;
     public GameObject cuerdaObject;
-    public TextMeshProUGUI countdownText; // Referencia al TextMeshPro para el contador
+    public TextMeshProUGUI countdownText; 
     public Vector3 playerRotation = new Vector3(0f, 263.509f, 0f);
 
     private void Start()

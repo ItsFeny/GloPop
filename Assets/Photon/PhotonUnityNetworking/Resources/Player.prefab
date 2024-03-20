@@ -188,7 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 3099236849545311151}
   jumpForce: 4
-  cuerdaTag: cuerda
+  cuerdaTag: Cuerda
 --- !u!54 &3099236849545311151
 Rigidbody:
   m_ObjectHideFlags: 0
